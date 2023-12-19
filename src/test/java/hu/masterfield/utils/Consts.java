@@ -1,25 +1,26 @@
 package hu.masterfield.utils;
 
 /**
- * Ez az osztály konstansokat tartalmaz, amelyeket külsõ forrásból, prooperty file-ból (.prop) olvasunk be.
+ * Ez az osztály konstansokat tartalmaz, amelyeket külsõ forrásból, property fileból (.properties)
+ * olvasunk be
+ *
  */
-public class Consts {
 
-    //Konstansok az applikációhoz
+public class Consts {
+    // Konstansok az applikációhoz
     public static final String APPLICATION_URL = "application.url";
 
-    //Konstansok az elérési utakhoz
-
+    // Konstansok az elérési utakhoz
     public static final String CONFIG_PROPERTIES = "/config.properties";
     public static final String GLOBAL_TEST_DATA_PROPERTIES = "/globalTestData.properties";
-    public static final String SCREENSHOTS_FOLDER = System.getProperty("user.dir").replace("\\", "/") + "target/screenshots";
+    public static final String SCREENSHOTS_FOLDER = System.getProperty("user.dir")
+            .replace("\\", "/") + "/target/screenshots";
 
-    //Konstansok a loginhez
-    public static final String LOGIN_USER_NAME = "login.username";
+    // Konstatnsok a Loginhoz
+    public static final String LOGIN_USERNAME = "login.userName";
     public static final String LOGIN_PASSWORD = "login.password";
 
-
-    //Konstansok a regisztrációhoz
+    // Konstansok a regisztrációhoz
     public static final String REG_TITLE = "reg.title";
     public static final String REG_FIRST_NAME = "reg.firstName";
     public static final String REG_LAST_NAME = "reg.lastName";
@@ -30,7 +31,7 @@ public class Consts {
     public static final String REG_PASSWORD = "reg.password";
     public static final String REG_CONFIRM_PASSWORD = "reg.password";
     public static final String REG_ADDRESS = "reg.address";
-    public static final String REG_LOCALTY = "reg.locality";
+    public static final String REG_LOCALITY = "reg.locality";
     public static final String REG_REGION = "reg.region";
     public static final String REG_POSTAL_CODE = "reg.postalCode";
     public static final String REG_COUNTRY = "reg.country";
@@ -38,20 +39,19 @@ public class Consts {
     public static final String REG_MOBILE_PHONE = "reg.mobilePhone";
     public static final String REG_WORK_PHONE = "reg.workPhone";
 
-    //Konstansok a profil adatok módosításához
+    // Konstansok a profil adatok módosításához
 
     public static final String MOD_TITLE = "mod.title";
     public static final String MOD_FIRST_NAME = "mod.firstName";
     public static final String MOD_LAST_NAME = "mod.lastName";
     public static final String MOD_ADDRESS = "mod.address";
+    public static final String MOD_LOCALITY = "mod.locality";
     public static final String MOD_REGION = "mod.region";
     public static final String MOD_POSTAL_CODE = "mod.postalCode";
     public static final String MOD_COUNTRY = "mod.country";
     public static final String MOD_HOME_PHONE = "mod.homePhone";
     public static final String MOD_MOBILE_PHONE = "mod.mobilePhone";
     public static final String MOD_WORK_PHONE = "mod.workPhone";
-
-
 
 
 }
