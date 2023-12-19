@@ -15,8 +15,6 @@ import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
-import static hu.masterfield.browser.WebBrowserType.Chrome;
-
 
 public class WebBrowser {
 

@@ -1,10 +1,16 @@
-package hu.Masterfield.utils;
+package hu.masterfield.utils;
 
 /**
  * Ez az osztály konstansokat tartalmaz, amelyeket külsõ forrásból, prooperty file-ból (.prop) olvasunk be.
  */
 public class Consts {
+
+    //Konstansok az applikációhoz
+    public static final String APPLICATION_URL = "application.url";
+
     //Konstansok az elérési utakhoz
+
+    public static final String CONFIG_PROPERTIES = "/config.properties";
     public static final String GLOBAL_TEST_DATA_PROPERTIES = "/globalTestData.properties";
     public static final String SCREENSHOTS_FOLDER = System.getProperty("user.dir").replace("\\", "/") + "target/screenshots";
 
