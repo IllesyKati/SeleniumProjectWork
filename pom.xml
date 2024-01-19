@@ -148,7 +148,6 @@
                         <include>**/**Test.java</include>
                     </includes>
                 </configuration>
-
                 <dependencies>
                     <dependency>
                         <groupId>org.aspectj</groupId>
