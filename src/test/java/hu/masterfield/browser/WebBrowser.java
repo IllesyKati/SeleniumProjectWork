@@ -32,7 +32,7 @@ public class WebBrowser {
                 chromeOptions.setBinary(WebBrowserSetting.getPathToChrome());
                 chromeOptions.addArguments("--remote-allow-origins=*");
                 chromeOptions.addArguments("ignore-certificate-errors");
-                chromeOptions.addArguments("'--ignore-ssl-errors=yes");
+                chromeOptions.addArguments("--ignore-ssl-errors=yes");
                 chromeOptions.addArguments("--incognito");
                 //chromeOptions.addArguments("--log-level=3");
 //       chromeOptions.addArguments("--headless");
@@ -56,17 +56,19 @@ public class WebBrowser {
                 chromeOptions.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
                 chromeOptions.addArguments("ignore-certificate-errors");
                 chromeOptions.addArguments("'--ignore-ssl-errors=yes");
+                chromeOptions.addArguments("--incognito");
                 driver = new ChromeDriver(chromeOptions);
                 break;
             case ChromeSM:
                 chromeOptions = new ChromeOptions();
                 chromeOptions.addArguments("ignore-certificate-errors");
                 chromeOptions.addArguments("'--ignore-ssl-errors=yes");
+                chromeOptions.addArguments("--incognito");
                 driver = new ChromeDriver(chromeOptions);
                 break;
             case FirefoxWDM:
                 WebDriverManager.firefoxdriver().setup();
-//       System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, "false");
+//			System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, "false");
 
                 ffOptions = new FirefoxOptions();
                 ffOptions.setProfile(new FirefoxProfile());
@@ -82,7 +84,7 @@ public class WebBrowser {
                 EdgeOptions edgeOptions = new EdgeOptions();
                 edgeOptions.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
                 edgeOptions.addArguments("--remote-allow-origins=*");
-//       edgeOptions.setCapability("ignore-certificate-errors", true);
+//			edgeOptions.setCapability("ignore-certificate-errors", true);
                 WebDriverManager.edgedriver().setup();
                 driver = new EdgeDriver(edgeOptions);
                 break;

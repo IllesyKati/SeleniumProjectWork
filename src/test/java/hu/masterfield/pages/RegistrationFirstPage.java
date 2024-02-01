@@ -99,7 +99,7 @@ public class RegistrationFirstPage extends BasePage{
     /**
      * Regisztráció elsõ oldalát valósítjuk meg.
      */
-    @Step("Regisztrációs úrlap 1. oldalának kitöltése")
+    @Step("Regisztrációs ûrlap 1. oldalának kitöltése")
     public RegistrationSecondPage registrationFirstPage() {
         logger.info("registrationFirstPage() called.");
 

@@ -3,6 +3,7 @@ package hu.masterfield.pages;
 /* Bejelentkezési képernyõ osztálya.
  */
 
+import hu.masterfield.utils.GlobalTestData;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Step;
 import org.apache.logging.log4j.LogManager;
@@ -80,7 +81,8 @@ public class LoginPage extends BasePage {
 
         assertEquals("Digital Bank", driver.getTitle());
         assertTrue(driver.getCurrentUrl().endsWith("/bank/register"));
-        assertEquals("Success", registrationSuccessfulLabel.getText());
+        assertTrue(registrationSuccessfulLabel.getText().contains("Success"));
+        assertEquals("Registration Successful. Please Login.", registrationSuccessfulLabel.getText());
 
         return isRegistrationSuccessful;
     }
@@ -142,17 +144,4 @@ public class LoginPage extends BasePage {
         return isCookieVisible;
     }
 
-    public void setTextbox(WebElement webElement, String webElementName,String text) {
-        if (webElement.getText().isEmpty()) {
-            // TO DO NOTHING
-        } else {
-            try {
-                webElement.clear();
-                logger.trace(webElementName + ".sendKeys() called");
-            } catch (Exception ex) {
-                logger.warn(webElementName + " textbox cannot clear.");
-            }
-        }
-        webElement.sendKeys(text);
-    }
 }

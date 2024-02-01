@@ -60,17 +60,20 @@ public class TC2_Registrationtest extends BaseTest{
         logger.info("RegistrationFirstPage betöltése");
         RegistrationFirstPage registrationFirstPage = new RegistrationFirstPage(driver);
         assertTrue(registrationFirstPage.isLoaded());
+        Screenshot.takesScreenshot(driver);
         RegistrationSecondPage registrationSecondPage = registrationFirstPage
                 .registrationFirstPage();
 
         // Regisztrációs ûrlap második oldalának kitöltése
         logger.info("RegistrationSecondPage betöltése");
         assertTrue(registrationSecondPage.isLoaded());
+        Screenshot.takesScreenshot(driver);
         LoginPage loginPageTwo = registrationSecondPage.registrationSecondPage();
 
         // Ellenõrzi, hogy a regisztráció sikeres volt-e, errõl megjelent-e a szöveg
         logger.info("Regisztráció sikerességének ellenõrzése");
         assertTrue(loginPageTwo.registrationIsSuccessful());
+        Screenshot.takesScreenshot(driver);
 
         //    /\
         //    ||
