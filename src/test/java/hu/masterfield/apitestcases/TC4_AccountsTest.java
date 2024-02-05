@@ -26,15 +26,15 @@ public class TC4_AccountsTest extends BaseAPITest{
         response.prettyPrint();
         response.then()
                 .statusCode(200)
-                .body("[0].accountType.code", equalTo("SAV"))
+                .body("[0].accountType.code", equalTo("MMA"))
                 .body("[0].accountType.category", equalTo("SAV"))
-                .body("[0].accountType.name", equalTo("Savings"))
+                .body("[0].accountType.name", equalTo("Money Market"))
                 .body("[1].accountType.code", equalTo("SAV"))
                 .body("[1].accountType.category", equalTo("SAV"))
                 .body("[1].accountType.name", equalTo("Savings"))
-                .body("[2].accountType.code", equalTo("MMA"))
-                .body("[2].accountType.category", equalTo("SAV"))
-                .body("[2].accountType.name", equalTo("Money Market"));
+                .body("[2].accountType.code", equalTo("SCK"))
+                .body("[2].accountType.category", equalTo("CHK"))
+                .body("[2].accountType.name", equalTo("Standard Checking"));
     }
 
 

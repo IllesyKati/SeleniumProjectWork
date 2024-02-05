@@ -18,31 +18,31 @@ public class UserControllerGetUserTest extends BaseAPITest {
      */
 
     String expectedResult = "{\n" +
-            "    \"id\": 4,\n" +
-            "    \"username\": \"admin@demo.io\",\n" +
-            "    \"enabled\": true,\n" +
-            "    \"accountNonExpired\": true,\n" +
-            "    \"accountNonLocked\": true,\n" +
-            "    \"credentialsNonExpired\": true,\n" +
-            "    \"userProfile\": {\n" +
-            "        \"id\": 5,\n" +
-            "        \"firstName\": \"Kisha\",\n" +
-            "        \"lastName\": \"Abernathy\",\n" +
-            "        \"title\": \"Mr.\",\n" +
-            "        \"gender\": \"M\",\n" +
-            "        \"ssn\": \"710-06-4454\",\n" +
-            "        \"dob\": \"12/21/1969\",\n" +
-            "        \"dom\": \"12/07/2023\",\n" +
-            "        \"emailAddress\": \"admin@demo.io\",\n" +
-            "        \"homePhone\": \"051-727-5095\",\n" +
-            "        \"mobilePhone\": \"601-272-3887\",\n" +
-            "        \"workPhone\": \"613-300-0377\",\n" +
-            "        \"address\": \"80401 Yong Road\",\n" +
-            "        \"locality\": \"Mickeystad\",\n" +
-            "        \"region\": \"PA\",\n" +
-            "        \"postalCode\": \"22103\",\n" +
-            "        \"country\": \"US\"\n" +
-            "    }\n" +
+            "  \"id\": 4,\n" +
+            "  \"username\": \"admin@demo.io\",\n" +
+            "  \"enabled\": true,\n" +
+            "  \"accountNonExpired\": true,\n" +
+            "  \"accountNonLocked\": true,\n" +
+            "  \"credentialsNonExpired\": true,\n" +
+            "  \"userProfile\": {\n" +
+            "    \"id\": 5,\n" +
+            "    \"firstName\": \"Darnell\",\n" +
+            "    \"lastName\": \"Murray\",\n" +
+            "    \"title\": \"Mr.\",\n" +
+            "    \"gender\": \"M\",\n" +
+            "    \"ssn\": \"534-04-7680\",\n" +
+            "    \"dob\": \"08/07/1996\",\n" +
+            "    \"dom\": \"02/03/2024\",\n" +
+            "    \"emailAddress\": \"admin@demo.io\",\n" +
+            "    \"homePhone\": \"573-124-9562\",\n" +
+            "    \"mobilePhone\": \"721-679-0107\",\n" +
+            "    \"workPhone\": \"699-529-9203\",\n" +
+            "    \"address\": \"33083 Joshua Hill\",\n" +
+            "    \"locality\": \"New Judyton\",\n" +
+            "    \"region\": \"MA\",\n" +
+            "    \"postalCode\": \"65174\",\n" +
+            "    \"country\": \"US\"\n" +
+            "  }\n" +
             "}";
 
     @Test
@@ -58,8 +58,8 @@ public class UserControllerGetUserTest extends BaseAPITest {
                 .statusCode(200)
                 .body("id", is(4))
                 .body("username", equalTo("admin@demo.io"))
-                .body("userProfile.firstName", equalTo("Kisha"))
-                .body("userProfile.lastName", equalTo("Abernathy"))
+                .body("userProfile.firstName", equalTo("Darnell"))
+                .body("userProfile.lastName", equalTo("Murray"))
                 .body("userProfile.emailAddress", equalTo("admin@demo.io"));
 
 

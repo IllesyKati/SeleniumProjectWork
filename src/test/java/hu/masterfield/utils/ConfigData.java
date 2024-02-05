@@ -11,7 +11,7 @@ import java.util.Properties;
 /**
  * A config.properties file felolvasását  végzõ osztály
  */
-public class ConfigData extends Properties {
+public class   ConfigData extends Properties {
 
     protected static Logger logger = LogManager.getLogger(ConfigData.class);
 

@@ -29,7 +29,7 @@ public class BaseTest implements TestWatcher {
     protected static WebDriver driver = null;
     protected static WebDriverWait wait = null;
     private static ConfigData configData = new ConfigData();
-    private static GlobalTestData globalTestData = new  GlobalTestData();
+    private static GlobalTestData globalTestData = new GlobalTestData();
     protected static Logger logger = LogManager.getLogger(BaseTest.class);
 
     @BeforeAll
