@@ -67,7 +67,7 @@ public class TC4_Datasource_Test extends BaseTest{
 
             CreateSavingsPage createSavingsPage = homePage.gotoNewSavingsPage();
 
-            logger.info("Create new Saning.");
+            logger.info("Create new Saving.");
 
             ViewSavingsAccountsPage viewSavingsAccountsPage = createSavingsPage.createNewSaving(saving);
 

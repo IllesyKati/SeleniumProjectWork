@@ -1,6 +1,7 @@
 package hu.masterfield.pages;
 
 import hu.masterfield.datatypes.Saving;
+import hu.masterfield.datatypes.Savings;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Step;
 import org.apache.logging.log4j.LogManager;
@@ -15,6 +16,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.openqa.selenium.By.xpath;
 
 
 /**
@@ -39,9 +41,18 @@ public class ViewSavingsAccountsPage extends BasePage{
     @FindBy(css="div#firstRow div.card-body")
     private List<WebElement> cards;
 
+    //@FindBy(xpath="//div[@class='h4 m-0' and @contenteditable='true']")
+   //private WebElement labelAccountName;
+
     // Page title
     @FindBy(xpath="//h1[text()='View Savings Accounts']")
     private WebElement pageTitle;
+
+    @FindBy(xpath="//h5[text()='No Accounts']")
+    private WebElement noAccountModalTitle;
+
+    @FindBy(xpath="//p[text()='You currently do not have accounts on record to view. Please create a new account.']")
+    private WebElement noAccountsModalText;
 
     public ViewSavingsAccountsPage(WebDriver driver) {
         super(driver);
@@ -60,7 +71,7 @@ public class ViewSavingsAccountsPage extends BasePage{
         assertNotNull(account, "Account with accountName="
                 + expectedSaving.getAccountName() + " is not found!");
 
-        WebElement divCartBody = account.findElement(By.xpath("./.."));
+        WebElement divCartBody = account.findElement(xpath("./.."));
         List<WebElement> cardDivs = divCartBody.findElements(By.cssSelector("div > div"));
         Saving actualSaving = getSavingFromCard(cardDivs);
         assertEquals(expectedSaving, actualSaving);
@@ -88,10 +99,12 @@ public class ViewSavingsAccountsPage extends BasePage{
 
 
 
+
+
     private WebElement findAccount(String accountName) {
         for (WebElement card : cards) {
-//            String labelAccountName = card.findElement(By.xpath("//div[@class='h4 m-0' and @contenteditable='true']"))
-//                    .getText();
+  //          String labelAccountName = card.findElement(By.xpath("//div[@class='h4 m-0' and @contenteditable='true']"))
+   //                 .getText();
             String labelAccountName = card.findElements(By.tagName("div")).get(0)
                     .getText();
 
@@ -108,7 +121,7 @@ public class ViewSavingsAccountsPage extends BasePage{
      * @return Saving típusú objektum
      */
     private Saving getSavingFromCard(List<WebElement> cardDivs) {
-        logger.info("getSavingFromCart() called.");
+        logger.info("getSavingFromCard() called.");
 
         String openingBalanceText = cardDivs.get(6).getText();
         Saving saving = new Saving(cardDivs.get(1).getText().substring(9),
@@ -144,10 +157,35 @@ public class ViewSavingsAccountsPage extends BasePage{
         }
         return returnValue;
     }
+
+    @Step("No Accounts figyelmeztetés megjelenésének ellenõrzése")
+    public boolean isNoAccountsModalLoaded(){
+        boolean isLoaded = isLoaded(noAccountModalTitle) && isLoaded(noAccountsModalText) ;
+
+        takesScreenshot();
+
+        logger.info("No Accounts modal title: " + noAccountModalTitle.getText());
+        logger.info("No Accounts modal text isLoaded=" + isLoaded);
+        return isLoaded;
+    }
+
+
+    @Step("Az accountokról kigyûjtött Saving adatok belepakolása egy listába.")
+    public List<Savings> getAllSavingsFromPage() {
+        logger.info("getAllSavingsFromPage() called.");
+
+        takesScreenshot();
+
+        List<Savings> savingsList = new ArrayList<>();
+        for (WebElement card : cards) {
+            List<WebElement> cardDivs = card.findElements(By.cssSelector("div"));
+         //   savingsList.add(getAllSavingsFromPage(cardDivs));
+        }
+        return savingsList;
+
+    }
+
 }
-
-
-
 
 
 

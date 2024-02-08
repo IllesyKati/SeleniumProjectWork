@@ -13,6 +13,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class UserControllerGetUserTest extends BaseAPITest {
 
+    protected static Logger logger = LogManager.getLogger(UserControllerGetUserTest.class);
+
     /*
             Ellenõrzi a userünk adatait.
      */

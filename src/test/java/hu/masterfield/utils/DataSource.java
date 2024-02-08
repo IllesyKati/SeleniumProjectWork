@@ -4,6 +4,7 @@ import com.opencsv.CSVWriter;
 import com.opencsv.bean.CsvToBeanBuilder;
 import com.opencsv.bean.StatefulBeanToCsvBuilder;
 import hu.masterfield.datatypes.Saving;
+import hu.masterfield.datatypes.Savings;
 import hu.masterfield.testcases.BaseTest;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -29,12 +30,12 @@ public class DataSource {
         return savings;
     }
 
-    public static void saveSavings(List<Saving> savingList) {
+    public static void saveSavings(List<Savings> savingsList) {
         try (CSVWriter writer = new CSVWriter(new FileWriter(Consts.SAVE_SAVINGS_DATA_CSV))) {
             new StatefulBeanToCsvBuilder<>(writer)
                     .withOrderedResults(true)
                     .withApplyQuotesToAll(false)
-                    .build().write(savingList);
+                    .build().write(savingsList);
         } catch (Exception ex) {
             logger.warn(ex.getMessage());
         }
