@@ -18,6 +18,8 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 import org.openqa.selenium.WebElement;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,9 +39,10 @@ public class TC9_SavingDataToCSV_Test extends BaseTest{
 
     public void TC9_SavingDataToCSV(TestInfo testInfo) throws InterruptedException {
         Thread.sleep(5000);
+        logger.info(testInfo + " started.");
 
 
-        //GDPR nyilatkozat elfogadása
+        //Cookie-k elfogadása
 
         GDPRBannerPage gdprBannerPage = new GDPRBannerPage(driver);
         assertTrue(gdprBannerPage.isLoaded());
@@ -64,42 +67,27 @@ public class TC9_SavingDataToCSV_Test extends BaseTest{
 
         // A létrehozott "Savings" típusú számlák adatainak (account name, type, balance, ownership) lementése egy **dumpSavings.csv** fájlba, a **target** könyvtárban kialakított helyre
 
-        /*
 
         ViewSavingsAccountsPage viewSavingsAccountsPage = homePage.gotoViewSavingsPage();
+        assertTrue(viewSavingsAccountsPage.isLoaded());
 
-        ArrayList<Saving>saving = new ArrayList<>();
+        List<Saving> savingsList = viewSavingsAccountsPage.getAllSavings();
+        saveSavingsTOCSV(savingsList);
 
-        for
+    }
 
-        //viewSavingsAccountsPage.isCardsLoaded();
-
-       // viewSavingsAccountsPage.getAllSavings();
-
-        //DataSource dataSource = new DataSource();
-
-       // DataSource.saveSavings();
-
-
-         */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    private void saveSavingsTOCSV(List<Saving> savingsList) {
+        String filePath = "target/dumpSavings.csv";
+        try (FileWriter csvWriter = new FileWriter(filePath)) {
+            csvWriter.append("Account Name,Type,Balance,Ownership\n");
+            for (Saving saving : savingsList) {
+                csvWriter.append(String.join(",", saving.getAccountName(), saving.getAccountTypes(), saving.getOpeningBalance(), saving.getOwnershipTypes()));
+                csvWriter.append("\n");
+            }
+            logger.info("Savings data saved to CSV file: " + filePath);
+        } catch (IOException e) {
+            logger.error("Error occurred while saving savings data to CSV file: " + e.getMessage());
+        }
     }
 
 }

@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="399aeb64-9fce-40e8-a1ca-9ef92b5ca894" name="Changes" comment="Practicing for the exam">
+    <list default="true" id="399aeb64-9fce-40e8-a1ca-9ef92b5ca894" name="Changes" comment="Practicing for the exam - updated DeleteUser test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/hu/masterfield/apitestcases/DeleteUser_APITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hu/masterfield/apitestcases/DeleteUser_APITest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hu/masterfield/pages/MyProfilePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hu/masterfield/pages/MyProfilePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hu/masterfield/testcases/TC9_SavingDataToCSV_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hu/masterfield/testcases/TC9_SavingDataToCSV_Test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,92 +46,90 @@
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.DeleteUser_APITest">
-    <configuration name="DeleteUser_APITest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.TC9_SavingDataToCSV_Test">
+    <configuration name="TC2_Registrationtest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SeleniumProjectWork" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="hu.masterfield.apitestcases.*" />
+          <option name="PATTERN" value="hu.masterfield.testcases.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="hu.masterfield.apitestcases" />
-      <option name="MAIN_CLASS_NAME" value="hu.masterfield.apitestcases.DeleteUser_APITest" />
+      <option name="PACKAGE_NAME" value="hu.masterfield.testcases" />
+      <option name="MAIN_CLASS_NAME" value="hu.masterfield.testcases.TC2_Registrationtest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DeleteUser_APITest.testDeleteUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TC4_Datasource_Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SeleniumProjectWork" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="hu.masterfield.apitestcases.*" />
+          <option name="PATTERN" value="hu.masterfield.testcases.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="hu.masterfield.apitestcases" />
-      <option name="MAIN_CLASS_NAME" value="hu.masterfield.apitestcases.DeleteUser_APITest" />
-      <option name="METHOD_NAME" value="testDeleteUser" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DeleteUser_APITest.testFindUserByIdAgain" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SeleniumProjectWork" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="hu.masterfield.apitestcases.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="hu.masterfield.apitestcases" />
-      <option name="MAIN_CLASS_NAME" value="hu.masterfield.apitestcases.DeleteUser_APITest" />
-      <option name="METHOD_NAME" value="testFindUserByIdAgain" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TC2_RegistrationAPITest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SeleniumProjectWork" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="hu.masterfield.apitestcases.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="hu.masterfield.apitestcases" />
-      <option name="MAIN_CLASS_NAME" value="hu.masterfield.apitestcases.TC2_RegistrationAPITest" />
+      <option name="PACKAGE_NAME" value="hu.masterfield.testcases" />
+      <option name="MAIN_CLASS_NAME" value="hu.masterfield.testcases.TC4_Datasource_Test" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TC2_RegistrationAPITest.testCreateNewUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TC8_ModifyProfileData_Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SeleniumProjectWork" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="hu.masterfield.apitestcases.*" />
+          <option name="PATTERN" value="hu.masterfield.testcases.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="hu.masterfield.apitestcases" />
-      <option name="MAIN_CLASS_NAME" value="hu.masterfield.apitestcases.TC2_RegistrationAPITest" />
-      <option name="METHOD_NAME" value="testCreateNewUser" />
+      <option name="PACKAGE_NAME" value="hu.masterfield.testcases" />
+      <option name="MAIN_CLASS_NAME" value="hu.masterfield.testcases.TC8_ModifyProfileData_Test" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TC8_ModifyProfileData_Test.testModifyProfileData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SeleniumProjectWork" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hu.masterfield.testcases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="hu.masterfield.testcases" />
+      <option name="MAIN_CLASS_NAME" value="hu.masterfield.testcases.TC8_ModifyProfileData_Test" />
+      <option name="METHOD_NAME" value="testModifyProfileData(org.junit.jupiter.api.TestInfo)" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TC9_SavingDataToCSV_Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SeleniumProjectWork" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hu.masterfield.testcases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="hu.masterfield.testcases" />
+      <option name="MAIN_CLASS_NAME" value="hu.masterfield.testcases.TC9_SavingDataToCSV_Test" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DeleteUser_APITest" />
-        <item itemvalue="JUnit.TC2_RegistrationAPITest" />
-        <item itemvalue="JUnit.TC2_RegistrationAPITest.testCreateNewUser" />
-        <item itemvalue="JUnit.DeleteUser_APITest.testDeleteUser" />
-        <item itemvalue="JUnit.DeleteUser_APITest.testFindUserByIdAgain" />
+        <item itemvalue="JUnit.TC9_SavingDataToCSV_Test" />
+        <item itemvalue="JUnit.TC4_Datasource_Test" />
+        <item itemvalue="JUnit.TC8_ModifyProfileData_Test" />
+        <item itemvalue="JUnit.TC8_ModifyProfileData_Test.testModifyProfileData" />
+        <item itemvalue="JUnit.TC2_Registrationtest" />
       </list>
     </recent_temporary>
   </component>
@@ -167,14 +166,23 @@
       <option name="project" value="LOCAL" />
       <updated>1707415434269</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Practicing for the exam - updated DeleteUser test">
+      <option name="closed" value="true" />
+      <created>1707416749408</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1707416749408</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="last commit" />
     <MESSAGE value="updated test cases after user data changed" />
     <MESSAGE value="Practicing for the exam" />
-    <option name="LAST_COMMIT_MESSAGE" value="Practicing for the exam" />
+    <MESSAGE value="Practicing for the exam - updated DeleteUser test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Practicing for the exam - updated DeleteUser test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
