@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="399aeb64-9fce-40e8-a1ca-9ef92b5ca894" name="Changes" comment="updated test cases after user data changed">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="399aeb64-9fce-40e8-a1ca-9ef92b5ca894" name="Changes" comment="Practicing for the exam">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/hu/masterfield/apitestcases/Proba.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/hu/masterfield/apitestcases/UserControllerGetUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hu/masterfield/apitestcases/UserControllerGetUserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/hu/masterfield/pages/ViewSavingsAccountsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hu/masterfield/pages/ViewSavingsAccountsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/hu/masterfield/testcases/TC4_Datasource_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hu/masterfield/testcases/TC4_Datasource_Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/hu/masterfield/utils/DataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hu/masterfield/utils/DataSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/GlobalTestData.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/GlobalTestData.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hu/masterfield/apitestcases/DeleteUser_APITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hu/masterfield/apitestcases/DeleteUser_APITest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,22 +77,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DeleteUser_APITest.testFindUserById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SeleniumProjectWork" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="hu.masterfield.apitestcases.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="hu.masterfield.apitestcases" />
-      <option name="MAIN_CLASS_NAME" value="hu.masterfield.apitestcases.DeleteUser_APITest" />
-      <option name="METHOD_NAME" value="testFindUserById" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="DeleteUser_APITest.testFindUserByIdAgain" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SeleniumProjectWork" />
       <extension name="coverage">
@@ -130,13 +108,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TC2_RegistrationAPITest.testCreateNewUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SeleniumProjectWork" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hu.masterfield.apitestcases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="hu.masterfield.apitestcases" />
+      <option name="MAIN_CLASS_NAME" value="hu.masterfield.apitestcases.TC2_RegistrationAPITest" />
+      <option name="METHOD_NAME" value="testCreateNewUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.DeleteUser_APITest" />
         <item itemvalue="JUnit.TC2_RegistrationAPITest" />
-        <item itemvalue="JUnit.DeleteUser_APITest.testFindUserByIdAgain" />
+        <item itemvalue="JUnit.TC2_RegistrationAPITest.testCreateNewUser" />
         <item itemvalue="JUnit.DeleteUser_APITest.testDeleteUser" />
-        <item itemvalue="JUnit.DeleteUser_APITest.testFindUserById" />
+        <item itemvalue="JUnit.DeleteUser_APITest.testFindUserByIdAgain" />
       </list>
     </recent_temporary>
   </component>
@@ -165,13 +159,22 @@
       <option name="project" value="LOCAL" />
       <updated>1707122221848</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Practicing for the exam">
+      <option name="closed" value="true" />
+      <created>1707415434269</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1707415434269</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="last commit" />
     <MESSAGE value="updated test cases after user data changed" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated test cases after user data changed" />
+    <MESSAGE value="Practicing for the exam" />
+    <option name="LAST_COMMIT_MESSAGE" value="Practicing for the exam" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

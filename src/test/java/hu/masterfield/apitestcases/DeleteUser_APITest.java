@@ -17,19 +17,17 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class DeleteUser_APITest extends BaseAPITest {
 
     /**
-     * Ebben a tesztben lekérdezünk egy usert username alapján, majd kitöröljük és újra lekérdezzük hogy ellenõrizzük hogy tényleg kitörlõdött-e.
+     * Ebben a tesztben lekérdezünk egy usert id alapján, majd kitöröljük és újra lekérdezzük hogy ellenõrizzük hogy tényleg kitörlõdött-e.
      */
 
     protected static Logger logger = LogManager.getLogger(DeleteUser_APITest.class);
 
-    GlobalTestData globalTestData = new GlobalTestData();
-    RegistrationData registrationData = new RegistrationData();
-
-    int userId = 1209;
+    int userId = 1296;
     String expectedError = "Not Found";
 
+
     @Test
-    public void testFindUserById() {
+    public void testDeleteUser() {
 
         /* GET /api/v1/user/{id} - GET metódussal lekérdezek egy usert id alapján.         */
 
@@ -48,13 +46,8 @@ public class DeleteUser_APITest extends BaseAPITest {
 
         logger.info("Ending GET /api/v1/user/{id}");
 
-    }
-
-
-    @Test
-    public void testDeleteUser() {
-
         /* DELETE /api/v1/user/{id} - DELETE metódussal kitörlöm a usert id alapján. */
+
         logger.info("Starting DELETE /api/v1/user/{id}");
 
         Response response2 = given()
@@ -69,12 +62,8 @@ public class DeleteUser_APITest extends BaseAPITest {
 
         logger.info("Ending DELETE /api/v1/user/{id}");
 
-    }
 
-    @Test
-    public void testFindUserByIdAgain() {
-
-        /* GET /api/v1/user/{id} - GET metódussal lekérdezek egy usert id alapján.         */
+        /* GET /api/v1/user/{id} - GET metódussal újra lekérdezem ugyanazt a usert akit kitöröltem.         */
 
         logger.info("Starting GET /api/v1/user/{id}");
 
